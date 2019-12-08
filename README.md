@@ -7,10 +7,9 @@ Depending of the web server we can do this:
 ## .htaccess file
 
 Create a .htaccess file in the related directory (on web site) and put this line:
-
-	```
-	Options -Indexes
-	```
+```
+Options -Indexes
+```
 
 ## For apache web server, 
  Add this line in httpd.conf files,
