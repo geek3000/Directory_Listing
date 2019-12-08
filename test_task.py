@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
-import re
+
 
 
 print("Exploiting a Directory Listing vulnerability in a web server.")
