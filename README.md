@@ -12,8 +12,9 @@ Depending of the web server we can do this:
 ## For apache web server, 
  Add this line in httpd.conf files,
 ```
-<Directory /{YOUR DIRECTORY}>
- 	Options FollowSymLinks
+
+<Directory /var/www/public_html>
+      Options -Indexes
 </Directory>
 ```
 
