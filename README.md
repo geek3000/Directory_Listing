@@ -20,12 +20,12 @@ Depending of the web server we can do this:
 	
 ## For Nginx Server,
 	Edit the configuration file nginx.conf, it can be found at /usr/local/nginx/conf, /etc/nginx or /usr/local/etc/nginx
-	Modified, it would be something like,
+Modified, it would be something like:
 
 ```server {
-        listen   80;
-        server_name  domain.com www.domain.com;
-        access_log  /var/...........................;
+	listen   80;
+	server_name  domain.com www.domain.com;
+	access_log  /var/...........................;
         root   /path/to/root;
         location / {
                 index  index.php index.html index.htm;
@@ -34,4 +34,5 @@ Depending of the web server we can do this:
                autoindex off;
         }
 }```
+
  ```The value off autoindex must be off```
