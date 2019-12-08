@@ -4,6 +4,11 @@ To prevent Directory Listing vulnerability in a web server we should edit the co
 
 Depending of the web server we can do this:
 
+## .htaccess file
+
+	Create a .htaccess file in the related directory (on web site) and put this line:
+	```Options -Indexes```
+
 ## For apache web server, 
  add this line in httpd.conf files,
 ```
@@ -11,13 +16,12 @@ Depending of the web server we can do this:
  	Options FollowSymLinks
 </Directory>
 ```
- 
-or create a .htaccess file in directory and put this lines:
-'''Options -Indexes'''
+
 	
 ## For Nginx Server,
-Edit the configuration file nginx.conf, it can be found at /usr/local/nginx/conf, /etc/nginx or /usr/local/etc/nginx
-Modified, it would be something like,
+	Edit the configuration file nginx.conf, it can be found at /usr/local/nginx/conf, /etc/nginx or /usr/local/etc/nginx
+	Modified, it would be something like,
+
 ```server {
         listen   80;
         server_name  domain.com www.domain.com;
@@ -29,5 +33,5 @@ Modified, it would be something like,
         location /somedir {
                autoindex off;
         }
- }```
- The value off autoindex must be off
+}```
+ ```The value off autoindex must be off```
