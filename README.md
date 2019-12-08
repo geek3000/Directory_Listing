@@ -1,14 +1,16 @@
-#how can we prevent Directory Listing vulnerability in a web server
+# how can we prevent Directory Listing vulnerability in a web server
 
 To prevent Directory Listing vulnerability in a web server we should edit the configuration files of the web server.
 
 Depending of the web server we can do this:
 
-#for apache web server, 
+## For apache web server, 
  add this line in httpd.conf files,
-'''<Directory /{YOUR DIRECTORY}>
- Options FollowSymLinks
- </Directory>'''
+'''python
+<Directory /{YOUR DIRECTORY}>
+ 	Options FollowSymLinks
+</Directory>
+'''
  
 	or create a .htaccess file in directory and put this lines:
 	'''Options -Indexes'''
