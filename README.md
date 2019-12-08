@@ -12,13 +12,13 @@ Depending of the web server we can do this:
 </Directory>
 ```
  
-	or create a .htaccess file in directory and put this lines:
-	'''Options -Indexes'''
+or create a .htaccess file in directory and put this lines:
+'''Options -Indexes'''
 	
 ## For Nginx Server,
-	edit the configuration file nginx.conf, it can be found at /usr/local/nginx/conf, /etc/nginx or /usr/local/etc/nginx
-	Modified, it would be something like,
-	'''server {
+Edit the configuration file nginx.conf, it can be found at /usr/local/nginx/conf, /etc/nginx or /usr/local/etc/nginx
+Modified, it would be something like,
+```server {
         listen   80;
         server_name  domain.com www.domain.com;
         access_log  /var/...........................;
@@ -29,5 +29,5 @@ Depending of the web server we can do this:
         location /somedir {
                autoindex off;
         }
- }'''
+ }```
  The value off autoindex must be off
