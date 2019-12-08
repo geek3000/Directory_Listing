@@ -10,7 +10,7 @@ Depending of the web server we can do this:
 	```Options -Indexes```
 
 ## For apache web server, 
- add this line in httpd.conf files,
+ Add this line in httpd.conf files,
 ```
 <Directory /{YOUR DIRECTORY}>
  	Options FollowSymLinks
@@ -22,7 +22,8 @@ Depending of the web server we can do this:
 	Edit the configuration file nginx.conf, it can be found at /usr/local/nginx/conf, /etc/nginx or /usr/local/etc/nginx
 Modified, it would be something like:
 
-```server {
+```
+server {
 	listen   80;
 	server_name  domain.com www.domain.com;
 	access_log  /var/...........................;
@@ -33,6 +34,7 @@ Modified, it would be something like:
         location /somedir {
                autoindex off;
         }
-}```
+}
+```
 
  ```The value off autoindex must be off```
