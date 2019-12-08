@@ -1,4 +1,4 @@
-# how can we prevent Directory Listing vulnerability in a web server
+# How can we prevent Directory Listing vulnerability in a web server
 
 To prevent Directory Listing vulnerability in a web server we should edit the configuration files of the web server.
 
@@ -6,16 +6,16 @@ Depending of the web server we can do this:
 
 ## For apache web server, 
  add this line in httpd.conf files,
-'''python
+```
 <Directory /{YOUR DIRECTORY}>
  	Options FollowSymLinks
 </Directory>
-'''
+```
  
 	or create a .htaccess file in directory and put this lines:
 	'''Options -Indexes'''
 	
-#for Nginx Server,
+## For Nginx Server,
 	edit the configuration file nginx.conf, it can be found at /usr/local/nginx/conf, /etc/nginx or /usr/local/etc/nginx
 	Modified, it would be something like,
 	'''server {
